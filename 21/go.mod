@@ -1,4 +1,4 @@
-module github.com/fullcycle/curso-go
+module curso-go
 
 go 1.20
 
