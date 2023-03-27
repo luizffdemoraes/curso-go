@@ -2,6 +2,7 @@ package main
 
 //  go build main.go
 //  go build
+//  go build -o xpto
 func main() {
 	a := 1
 	// b := 2
