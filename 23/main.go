@@ -1,5 +1,7 @@
 package main
 
+//  go build main.go
+//  go build
 func main() {
 	a := 1
 	// b := 2
