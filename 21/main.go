@@ -1,10 +1,10 @@
 package main
 
 import ("fmt"
-		"matematica"
+		"github.com/fullcycle/curso-go/matematica"
 	)
 
 func main() {
 	s := matematica.Soma(10, 20)
-	fmt.Println("Resuldate: %v", s)
+	fmt.Printf("Resuldate: %v", s)
 }
