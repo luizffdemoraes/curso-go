@@ -21,13 +21,13 @@ func main() {
 	}
 	db.AutoMigrate(&Product{})
 
-	// create
+	// CREATE
 	// db.Create(&Product{
 	// 	Name:  "Notebook",
 	// 	Price: 1000.00,
 	// })
 
-	// create batch
+	// CREATE BATCH
 	//products := []Product{
 	//	{Name: "Notebook", Price: 1000.00},
 	//	{Name: "Mouse", Price: 50.00},
@@ -35,17 +35,39 @@ func main() {
 	//}
 	//db.Create(products)
 
-	// select one
+	// SELECT ONE
 	// var product Product
 	// db.First(&product, 2)
 	// fmt.Println(product)
 	// db.First(&product, "name = ?", "Mouse")
 	// fmt.Println(product)
 
-	// select all
+	// SELECT ALL
+	// var products []Product
+	// db.Find(&products)
+	// for _, product := range products {
+	// 	fmt.Println(product)
+	// }
+
+	// SELECT LIMIT E (OFFSET paginação)
+	// var products []Product
+	// db.Limit(2).Offset(2).Find(&products)
+	// for _, product := range products {
+	// 	fmt.Println(product)
+	// }
+
+	// SELECT WHERE
+	// var products []Product
+	// db.Where("price > ?", 90).Find(&products)
+	// for _, product := range products {
+	// 	fmt.Println(product)
+	// }
+
+	// SELECT LIKE
 	var products []Product
-	db.Find(&products)
+	db.Where("name LIKE ?", "%mouse%").Find(&products)
 	for _, product := range products {
 		fmt.Println(product)
 	}
+
 }
