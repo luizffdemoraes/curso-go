@@ -2,6 +2,8 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/google/uuid"
 )
@@ -37,6 +39,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	p, err := selectProduct(db, product.ID)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("Product: %v, possui o preco de %.2f", p.Name, p.Price)
 }
 
 func insertProduct(db *sql.DB, product *Product) error {
@@ -64,5 +71,20 @@ func updateProduct(db *sql.DB, product *Product) error {
 		return err
 	}
 	return nil
+}
 
+func selectProduct(db *sql.DB, id string) (*Product, error) {
+	stmt, err := db.Prepare("select id, name, price from products where id = ?")
+	if err != nil {
+		return nil, err
+	}
+	defer stmt.Close()
+	var p Product 
+	// Exemplo err = stmt.QueryRowContext(ctx, id).Scan(&p.ID, &p.Name, &p.Price)
+	err = stmt.QueryRow(id).Scan(&p.ID, &p.Name, &p.Price)
+	if err != nil {
+		return nil, err
+	}
+	// Estamos retornando o local onde a variavel de p está armazenada
+	return &p, nil
 }
