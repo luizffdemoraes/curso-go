@@ -44,6 +44,14 @@ func main() {
 		panic(err)
 	}
 	fmt.Printf("Product: %v, possui o preco de %.2f", p.Name, p.Price)
+
+	products, err := selectAllProducts(db)
+	if err != nil {
+		panic(err)
+	}
+	for _, p := range products {
+		fmt.Printf("Product: %v, possui o preco de %.2f\n", p.Name, p.Price)
+	}
 }
 
 func insertProduct(db *sql.DB, product *Product) error {
@@ -79,7 +87,7 @@ func selectProduct(db *sql.DB, id string) (*Product, error) {
 		return nil, err
 	}
 	defer stmt.Close()
-	var p Product 
+	var p Product
 	// Exemplo err = stmt.QueryRowContext(ctx, id).Scan(&p.ID, &p.Name, &p.Price)
 	err = stmt.QueryRow(id).Scan(&p.ID, &p.Name, &p.Price)
 	if err != nil {
@@ -87,4 +95,25 @@ func selectProduct(db *sql.DB, id string) (*Product, error) {
 	}
 	// Estamos retornando o local onde a variavel de p está armazenada
 	return &p, nil
+}
+
+func selectAllProducts(db *sql.DB) ([]Product, error) {
+	rows, err := db.Query("select id, name, price from products")
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var products []Product
+	// Percorrer o resultado
+	for rows.Next() {
+		// Jogar o valor dentro de p
+		var p Product
+		err = rows.Scan(&p.ID, &p.Name, &p.Price)
+		if err != nil {
+			return nil, err
+		}
+		// Adicionar na lista
+		products = append(products, p)
+	}
+	return products, nil
 }
