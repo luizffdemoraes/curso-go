@@ -25,3 +25,6 @@ create table products (id varchar(255), name varchar(80), price decimal(10,2), p
 
 Após a criação do go.mod executar.:
 go mod tidy
+
+-> Consulta após inserção de novo produto no banco.:
+select * from products
