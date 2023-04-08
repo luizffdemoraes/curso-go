@@ -28,3 +28,6 @@ go mod tidy
 
 -> Consulta após inserção de novo produto no banco.:
 select * from products
+
+GORM - Ferramenta para Mapeamento de Objeto Relacional
+https://gorm.io/
