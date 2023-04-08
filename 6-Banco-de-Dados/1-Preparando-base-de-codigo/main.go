@@ -35,6 +35,7 @@ func main() {
 }
 
 func insertProduct(db *sql.DB, product *Product) error {
+	// sqllite utiliza $1 no lugar do ? no values
 	stmt, err := db.Prepare("insert into products(id, name, price) values(?, ?, ?)")
 	if err != nil {
 		return err
