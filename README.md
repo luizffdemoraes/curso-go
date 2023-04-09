@@ -23,6 +23,9 @@ docker-compose exec mysql bash
 Script de criação de tabela.:
 create table products (id varchar(255), name varchar(80), price decimal(10,2), primary key (id));
 
+Criar arquivo go.mod
+go mod init github.com/luizffdemoraes/curso-go/database
+
 Após a criação do go.mod executar.:
 go mod tidy
 
@@ -31,3 +34,5 @@ select * from products
 
 GORM - Ferramenta para Mapeamento de Objeto Relacional
 https://gorm.io/
+
+
