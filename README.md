@@ -39,6 +39,10 @@ Em caso de falha ao tentar realizar o drop table.:
 SET FOREIGN_KEY_CHECKS=0; -- to disable them
 SET FOREIGN_KEY_CHECKS=1; -- to re-enable them
 
-One to One
+One to One (um para um) 
 -> Belongs to 
 -> Has One
+
+One to many (um para muitos)
+-> Has Many
+
