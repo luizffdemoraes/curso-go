@@ -48,3 +48,8 @@ One to many (um para muitos)
 
 Many to Many (Muitos para muitos)
 
+Lock pessimista
+-> Lock a tabela, a linha fica numa linha de espera para poder realizar alteração após comitar
+
+Lock otimista
+-> Ele versiona ao realizar alterações
