@@ -35,4 +35,10 @@ select * from products
 GORM - Ferramenta para Mapeamento de Objeto Relacional
 https://gorm.io/
 
+Em caso de falha ao tentar realizar o drop table.:
+SET FOREIGN_KEY_CHECKS=0; -- to disable them
+SET FOREIGN_KEY_CHECKS=1; -- to re-enable them
 
+One to One
+-> Belongs to 
+-> Has One
