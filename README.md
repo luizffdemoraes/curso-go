@@ -16,9 +16,13 @@ https://go.dev/play/
 
 -> Aula - Preparando base de código:
 
-Comandos dockers utilizados.:
-docker-compose up -d
-docker-compose exec mysql bash
+Comandos dockers utilizados para criar o banco de dados em container e acessa-lo.:
+-> docker-compose up -d
+
+-> docker-compose exec mysql bash
+
+-> mysql -u root -p goexpert
+-> senha
 
 Script de criação de tabela.:
 create table products (id varchar(255), name varchar(80), price decimal(10,2), primary key (id));
