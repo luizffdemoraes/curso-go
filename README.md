@@ -46,3 +46,5 @@ One to One (um para um)
 One to many (um para muitos)
 -> Has Many
 
+Many to Many (Muitos para muitos)
+
