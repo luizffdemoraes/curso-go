@@ -66,3 +66,15 @@ Exemplo
 go mod init github.com/luizffdemoraes/curso-go/7-Packaging/1-Introduzindo-go-mod
 
 - Para poder habilitar o export de metodos, struct, atributos e parametros é necessário utilizar letra inicial Maiúscula
+
+Avalia o código e imports e baseado nisso e baixa os pacotes ou realiza remoção.
+go mod tidy 
+
+Ele baixa o pacote solicitado
+go get github.com/google/uuid
+
+Adiciona as dependencias utilizadas no projeto
+go.mod
+
+Garante as versões do seu projeto
+go.sum 
