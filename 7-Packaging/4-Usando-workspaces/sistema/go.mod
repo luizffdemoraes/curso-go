@@ -1,0 +1,5 @@
+module github.com/luizffdemoraes/curso-go/7-Packaging/3/sistema
+
+go 1.20
+
+require github.com/google/uuid v1.3.0

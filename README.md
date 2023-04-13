@@ -84,3 +84,11 @@ Caso seja necessário trabalhar com dois modulos locais e possivel utilizar esse
 go mod edit -replace github.com/luizffdemoraes/curso-go/7-Packaging/3/math=../math
 
 Obs.: Ao subir em um repositório na nuvem pois não existe url relativa na pratica ele é uma solução local.
+
+Criação do go.work, ele informa no arquivos as url relativas e podemos colocar ele no gitignore deve ser criado na raiz das pastas que detem o go.mod. O go.work é algo independente do sistema ao adicionalo não será possível utilizar o comando go mod tidy para baixar dependencia. Pasolucionar essa ocorrência temos as seguintes opções.:
+
+1 go get github.com/google/uuid 
+2 go mod tidy -e
+3 publicar a aplicação para não utilizar o go workspaces
+
+go work init ./math ./sistema
