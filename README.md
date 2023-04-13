@@ -78,3 +78,9 @@ go.mod
 
 Garante as versões do seu projeto
 go.sum 
+
+Caso seja necessário trabalhar com dois modulos locais e possivel utilizar esse exemplo para que procure local.:
+
+go mod edit -replace github.com/luizffdemoraes/curso-go/7-Packaging/3/math=../math
+
+Obs.: Ao subir em um repositório na nuvem pois não existe url relativa na pratica ele é uma solução local.
