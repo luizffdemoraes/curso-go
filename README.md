@@ -57,3 +57,10 @@ Lock pessimista
 
 Lock otimista
 -> Ele versiona ao realizar alterações
+
+1- Packaging
+- Ao iniciar um projeto com Go devemos criar um modulo
+- Fazendo isso esta sendo dado opção para trabalhar nesse diretorio não no Go Path
+
+Exemplo
+go mod init github.com/luizffdemoraes/curso-go/7-Packaging/1-Introduzindo-go-mod
