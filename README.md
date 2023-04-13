@@ -64,3 +64,5 @@ Lock otimista
 
 Exemplo
 go mod init github.com/luizffdemoraes/curso-go/7-Packaging/1-Introduzindo-go-mod
+
+- Para poder habilitar o export de metodos, struct, atributos e parametros é necessário utilizar letra inicial Maiúscula
