@@ -92,3 +92,15 @@ Criação do go.work, ele informa no arquivos as url relativas e podemos colocar
 3 publicar a aplicação para não utilizar o go workspaces
 
 go work init ./math ./sistema
+
+No processo de criação de teste deve-se utilizar a nomenclatura para cada metodo de validação implementado com a inicial.:
+"Test"
+
+Verificar cobertura de código.:
+go test -coverprofile=coverage
+
+Rodar test unitários.:
+go test
+
+Verificar ponto onde falta a cobertura gerando html apresentado.:
+go tool cover -html=coverage
