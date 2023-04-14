@@ -119,3 +119,9 @@ go test -bench=. -run=^# -count=10 -benchtime=3s
 
 Pegar a documentação do Go Test.:
 go help test
+
+Fuzzing Teste de mutação para executar.:
+go test -fuzz=. -run=^#
+
+Determinar um tempo de execução para Fuzzing
+go test -fuzz=. -fuzztime=5s -run=^#
