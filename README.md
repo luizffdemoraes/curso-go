@@ -104,3 +104,18 @@ go test
 
 Verificar ponto onde falta a cobertura gerando html apresentado.:
 go tool cover -html=coverage
+
+Rodar testes de BenchMarck.:
+go test -bench=.
+
+Rodar somente teste Benchmark.:
+go test -bench=. -run=^#
+
+Executar de 10 em 10.:
+go test -bench=. -run=^# -count=10
+
+Executar por 3 segundos apenas por operação.:
+go test -bench=. -run=^# -count=10 -benchtime=3s
+
+Pegar a documentação do Go Test.:
+go help test
