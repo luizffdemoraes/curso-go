@@ -125,3 +125,7 @@ go test -fuzz=. -run=^#
 
 Determinar um tempo de execução para Fuzzing
 go test -fuzz=. -fuzztime=5s -run=^#
+
+Layout project GoLang.:
+
+https://github.com/golang-standards/project-layout
