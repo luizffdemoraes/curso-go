@@ -132,3 +132,21 @@ go test -fuzz=. -fuzztime=5s -run=^#
 Layout project GoLang.:
 
 https://github.com/golang-standards/project-layout
+
+
+WebFramework tem um contexto proprio e tem seu próprio listem and server eles trabalham focados na area de http ou websocket.
+
+Echo.: https://echo.labstack.com/
+Fiber.: https://gofiber.io/
+Gin.: https://gin-gonic.com/
+
+Framework completo.
+
+Buffalo.: https://gobuffalo.io/
+Iris.: https://www.iris-go.com/
+
+Roteador e mais enxuto que um webframework ele implementa interfaces que o muxserver implementa. O roteador do Go padrão não permite a utilização de variáveis nas rotas e expressões regulares e agrupamento.
+Gorilla.: https://www.gorillatoolkit.org/
+Chi.: https://go-chi.io/#/
+
+
