@@ -8,6 +8,11 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:8000/products HTTP/1.1
+Content-Type: application/json  
+
+###
+
 GET http://localhost:8000/products/092dece9-f65f-47d8-a3ea-7fa85d06a846 HTTP/1.1
 Content-Type: application/json  
 
@@ -20,3 +25,8 @@ Content-Type: application/json
     "name": "My Product Updated",
     "price": 200
 }
+
+###
+
+DELETE  http://localhost:8000/products/092dece9-f65f-47d8-a3ea-7fa85d06a846 HTTP/1.1
+Content-Type: application/json  
