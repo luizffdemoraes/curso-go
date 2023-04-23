@@ -102,6 +102,9 @@ go test -coverprofile=coverage
 Rodar test unitários.:
 go test
 
+Rodar todos testes unitários.:
+go test ./...
+
 Verificar ponto onde falta a cobertura gerando html apresentado.:
 go tool cover -html=coverage
 
