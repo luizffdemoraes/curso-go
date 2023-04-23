@@ -146,6 +146,7 @@ Buffalo.: https://gobuffalo.io/
 Iris.: https://www.iris-go.com/
 
 Roteador e mais enxuto que um webframework ele implementa interfaces que o muxserver implementa. O roteador do Go padrão não permite a utilização de variáveis nas rotas e expressões regulares e agrupamento.
+
 Gorilla.: https://www.gorillatoolkit.org/
 Chi.: https://go-chi.io/#/
 
