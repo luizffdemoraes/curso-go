@@ -10,11 +10,11 @@ type conf struct {
 	DBHost        string `mapstructure:"DB_HOST"`
 	DBPort        string `mapstructure:"DB_PORT"`
 	DBUser        string `mapstructure:"DB_USER"`
-	DBPass        string `mapstructure:"DB_PASSWORD"`
+	DBPassword    string `mapstructure:"DB_PASSWORD"`
 	DBName        string `mapstructure:"DB_NAME"`
 	WebServerPort string `mapstructure:"WEB_SERVER_PORT"`
 	JWTSecret     string `mapstructure:"JWT_SECRET"`
-	JwtExperesIn  int    `mapstructure:"JWT_EXPIRES_IN"`
+	JwtExperesIn  int    `mapstructure:"JWT_EXPIRESIN"`
 	TokenAuth     *jwtauth.JWTAuth
 }
 
@@ -31,7 +31,7 @@ func LoadConfig(path string) (*conf, error) {
 	}
 	err = viper.Unmarshal(&cfg)
 	if err != nil {
-		return nil, err
+		panic(err)
 	}
 	cfg.TokenAuth = jwtauth.New("HS256", []byte(cfg.JWTSecret), nil)
 	return cfg, err
