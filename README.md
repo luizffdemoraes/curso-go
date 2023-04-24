@@ -152,3 +152,5 @@ Chi.: https://go-chi.io/#/
 
 JWT.:
 https://jwt.io/
+
+Request -> Middleware(usa os dados, faz alguma coisa, continua) |outro middleware|outro middleware| -> Handler -> Response
