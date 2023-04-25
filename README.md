@@ -154,3 +154,16 @@ JWT.:
 https://jwt.io/
 
 Request -> Middleware(usa os dados, faz alguma coisa, continua) |outro middleware|outro middleware| -> Handler -> Response
+
+Swagger.:
+https://github.com/swaggo/swag
+
+-- go-chi/chi
+https://github.com/swaggo/http-swagger
+
+Download swag by using:
+go install github.com/swaggo/swag/cmd/swag@latest
+
+Run swag init in the project's root folder which contains the main.go file. This will parse your comments and generate the required files (docs folder and docs/docs.go).
+swag init -g cmd/server/main.go
+
